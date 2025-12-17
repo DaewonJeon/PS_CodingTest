@@ -1,0 +1,91 @@
+백준(BOJ) 코드 스타일은 깔끔 + 최소한 + 빠른 입력 처리 + 불필요한 출력/문자 없음이 핵심이야.
+딱 요 포인트만 챙기면 “백준 스타일”이라고 보면 된다.
+필요한 것들만 핵심만 딱 정리해줄게 👇
+
+✅ 백준 코드 스타일 핵심 정리
+1) 입력은 무조건 빠르게 (sys.stdin.readline 사용)
+
+특히 N이 커지면 input()보다 readline이 훨씬 빠름.
+
+import sys
+input = sys.stdin.readline
+
+2) 불필요한 출력 금지
+
+안내 문구 절대 X
+
+"다시 입력하세요" 같은 말 절대 X
+
+오직 문제에서 요구하는 출력만 정확하게.
+
+❌ print("정수 입력하세요")
+⭕ print(answer)
+
+3) 변수명은 짧고 명확하게
+
+백준은 장황한 변수명 잘 안 씀.
+
+n = int(input())
+arr = list(map(int, input().split()))
+
+4) 검증(Validation) 거의 안 넣음
+
+백준 입력은 항상 문제 조건을 만족하는 정답 입력이 들어온다고 전제.
+
+예시:
+
+n개 입력하라 → 그냥 n개 들어온다고 믿음
+
+정수 범위는 유효하다고 믿음
+
+따라서 이런 코드는 안 넣음:
+
+if len(arr) != n:
+    ...
+
+5) 반복문은 빠르게 (가능하면 리스트컴프, sum 등 사용)
+
+예:
+
+cnt = arr.count(v)
+
+
+필요하면 map+sum 패턴도 자주 씀:
+
+cnt = sum(1 for x in arr if x == v)
+
+6) 출력 형식 정확히 맞추기
+
+공백/줄바꿈 하나라도 틀리면 오답
+
+마지막 줄에 공백 넣지 않기
+
+7) 문자열 처리 시 strip() 자주 사용
+
+readline은 줄바꿈 포함하니까 대부분 이렇게 함:
+
+s = input().strip()
+
+8) 대량 입출력 문제는 sys.stdout.write
+
+보통 10만~50만 출력에서 사용:
+
+import sys
+sys.stdout.write(str(answer) + "\n")
+
+🧩 최종적으로 “백준 스타일" 예시
+
+문제: 값이 몇 번 나오는지 세기
+
+import sys
+input = sys.stdin.readline
+
+n = int(input())
+arr = list(map(int, input().split()))
+v = int(input())
+
+print(arr.count(v))
+
+
+깔끔. 군더더기 없음. 설명 없음. 검증 없음.
+백준스러운 냉정한 코드 스타일 100점짜리.

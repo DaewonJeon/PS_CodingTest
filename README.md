@@ -1,2 +1,5 @@
-# PS_CodingTest
-Problem Solving  with &lt;BAEKJOON &amp; PROGRAMMERS>
+## PS_CodingTest
+
+
+#### **Problem Solving with BAEKJOON**
+> <백준 알고리즘>
