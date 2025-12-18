@@ -6,9 +6,9 @@ n = int(input())
 for i in range(0,n):  
 
     b = []
-    x = input().strip()
-
-    is_valid = True   # 체크해주는 변수
+    x = input().strip()     # .strip() 양쪽 끝의 공백/줄바꿈 제거, sys 쓸때 필수
+                            # sys.stdin.readline()은 사용자가 엔터를 치는 순간 엔터까지 문자열에 포함
+    is_valid = True     # 체크해주는 변수
 
     for z in x:
         if z == '(':
