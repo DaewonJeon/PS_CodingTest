@@ -31,8 +31,4 @@ for i in range(n):
         if stack:
             print(stack[-1])
         else:
-            print("-1")    
-
-    
-
-
+            print("-1")
