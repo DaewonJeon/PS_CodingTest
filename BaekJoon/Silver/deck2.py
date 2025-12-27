@@ -5,8 +5,8 @@ input = sys.stdin.readline
 n = int(input())
 dq = deque()
 for i in range(0,n):
-  x = input().strip()
-  
+  x = input().strip() # input() 으로만 쓰면 \n 못 지워서 입력잘못됨
+
   if x == "3":
     if dq:
       print(dq.popleft())
