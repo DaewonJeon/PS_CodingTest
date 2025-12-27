@@ -39,8 +39,4 @@ for i in range(0,n):
   if x.startswith("1 "):
       dq.appendleft(x.split()[1])
   elif x.startswith("2 "):
-      dq.append(x.split()[1])
-
-    
-    
-
+      dq.append(x.split()[1])    
